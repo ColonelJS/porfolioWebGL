@@ -21,11 +21,11 @@
     </div>
 
     <script>
-        /*window.addEventListener("load", function () {
+        window.addEventListener("load", function () {
             if ("serviceWorker" in navigator) {
                 navigator.serviceWorker.register("ServiceWorker.js");
             }
-        });*/
+        });
 
         var container = document.querySelector("#unity-container");
         var canvas = document.querySelector("#unity-canvas");
@@ -87,39 +87,12 @@
         document.body.appendChild(script);
     </script>
 
-    <!-- YouTube Player Integration -->
-    <div id="youtube-container" style="text-align:center; margin-top: 20px;">
-        <iframe id="youtube-player" width="560" height="315"
-                src="https://www.youtube.com/embed/HJtV3wSp6Xw"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-        </iframe>
+    <!-- Afficher la vidéo depuis GitHub Pages -->
+    <div id="video-container" style="text-align:center; margin-top: 20px;">
+        <video width="640" height="360" controls>
+            <source src="https://coloneljs.github.io/porfolioWebGL/StreamingAssets/20241028_191235.mp4" type="video/mp4">
+            Votre navigateur ne prend pas en charge la balise vidéo.
+        </video>
     </div>
-
-    <script>
-        // Créer un script pour l'API YouTube
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-        // Créer un player YouTube dans l'iframe
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('youtube-player', {
-                height: '315',
-                width: '560',
-                videoId: 'HJtV3wSp6Xw',
-                events: {
-                    'onReady': onPlayerReady
-                }
-            });
-        }
-
-        function onPlayerReady(event) {
-            event.target.playVideo();
-        }
-    </script>
 </body>
 </html>
