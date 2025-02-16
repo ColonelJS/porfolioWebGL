@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-TestWebGL-1.0";
 const contentToCache = [
-    "Build/VideoBuild3.loader.js",
-    "Build/VideoBuild3.framework.js",
-    "Build/VideoBuild3.data",
-    "Build/VideoBuild3.wasm",
+    "Build/videoBuild4.loader.js",
+    "Build/videoBuild4.framework.js",
+    "Build/videoBuild4.data",
+    "Build/videoBuild4.wasm",
     "TemplateData/style.css"
 
 ];
